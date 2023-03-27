@@ -1,11 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import { Button } from "./CustomComponents";
 
 const Forms = () => {
   return (
     <div className="md:w-1/2 w-full bg-[#F1F6FB] rounded-lg py-[50px] sm:px-[30px] px-[15px]">
-      <form className="w-full flex flex-col gap-[20px]">
+      <motion.form
+        initial={{ translateX: 50, opacity: 0 }}
+        whileInView={{ translateX: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="w-full flex flex-col gap-[20px]"
+      >
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-[10px]">
           <input
             type="text"
@@ -51,7 +58,7 @@ const Forms = () => {
             </h1>
           </Button>
         </div>
-      </form>
+      </motion.form>
     </div>
   );
 };

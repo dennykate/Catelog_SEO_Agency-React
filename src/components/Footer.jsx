@@ -80,21 +80,21 @@ const Footer = () => {
             className="w-full py-[32px] flex justify-between lg:items-center items-start lg:flex-row flex-col lg:gap-0 
           gap-[10px] "
           >
-            <h1 className="font-bold text-[15px] font-outfit text-white">
+            <h1 className="font-bold sm:text-[15px] text-[13px] font-outfit text-white">
               © 2023 Cetalog, All Rights Reserved. Design By Theme Pure
             </h1>
 
             <div className="flex items-center gap-[20px]">
               <a
                 href="#"
-                className="font-normal text-[15px] font-outfit text-white hover:text-opacity-70 
+                className="font-normal sm:text-[15px] text-[13px] font-outfit text-white hover:text-opacity-70 
                 transition-all duration-200 ease-in-out"
               >
                 Terms and conditions
               </a>
               <a
                 href="#"
-                className="font-normal text-[15px] font-outfit text-white hover:text-opacity-70 
+                className="font-normal sm:text-[15px] text-[13px] font-outfit text-white hover:text-opacity-70 
                 transition-all duration-200 ease-in-out"
               >
                 Privacy Policy

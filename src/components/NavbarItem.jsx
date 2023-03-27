@@ -25,7 +25,7 @@ const NavbarItem = ({ title, data }) => {
           onMouseEnter={() => setShowDetail(true)}
           onMouseLeave={() => setShowDetail(false)}
           className={`min-w-[200px] bg-white ${
-            showDetail ? "min-h-[20px] py-[12px]" : "min-h-0"
+            showDetail ? "min-h-auto py-[12px]" : "min-h-0"
           } transition-all duration-200 ease-in-out px-[10px] flex flex-col gap-[12px]`}
         >
           {showDetail &&

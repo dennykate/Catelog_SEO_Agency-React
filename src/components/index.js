@@ -10,3 +10,5 @@ export { default as GetInTouch } from "./GetInTouch";
 export { default as OurTeam } from "./OurTeam";
 export { default as PrimaryBlock } from "./PrimaryBlock";
 export { default as Footer } from "./Footer";
+export { default as Loading } from "./Loading";
+export { default as ScrollToTop } from "./ScrollToTop";

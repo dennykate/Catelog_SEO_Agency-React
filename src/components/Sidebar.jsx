@@ -10,7 +10,7 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
       className={`w-full min-h-screen bg-white z-[1000] fixed top-0 left-0 flex flex-col gap-[10px] sm:p-[20px] sm:px-[20px] 
     py-[10px] px-[10px] ${
       showSidebar ? " translate-x-0" : "-translate-x-[100%]"
-    } transition-all duration-200 ease-in-out`}
+    } transition-all duration-200 ease-in-out `}
     >
       {navbarData?.map(({ title, data }, index) => (
         <div key={index} className="flex-col flex gap-[1px]">
@@ -18,14 +18,17 @@ const Sidebar = ({ showSidebar, setShowSidebar }) => {
             {title}
           </h1>
           <div className="flex flex-col ">
-            {data?.map((item, index) => (
-              <h1
-                key={index}
-                className="text-gray-600 text-base font-[400] font-outfit"
-              >
-                {item}
-              </h1>
-            ))}
+            {data?.map((item, index) => {
+              if (index < 3)
+                return (
+                  <h1
+                    key={index}
+                    className="text-gray-600 text-base font-[400] font-outfit"
+                  >
+                    {item}
+                  </h1>
+                );
+            })}
           </div>
         </div>
       ))}

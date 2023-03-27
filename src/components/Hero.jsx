@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BsFillPlayFill } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 import { Button } from "./CustomComponents";
 import Navbar from "./Navbar";
@@ -24,13 +25,24 @@ const Hero = () => {
           Solution...
         </h1>
         <div className="w-full flex items-center justify-center gap-[26px] md:flex-row flex-col">
-          <Button height="sm:h-[70px] h-[50px]" px="sm:px-[32px] px-[24px]">
-            <h1 className="text-white font-semibold font-outfit tracking-wider sm:text-lg text-base">
-              See our all services
-            </h1>
-          </Button>
+          <motion.div
+            initial={{ translateX: -50, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Button height="sm:h-[70px] h-[50px]" px="sm:px-[32px] px-[24px]">
+              <h1 className="text-white font-semibold font-outfit tracking-wider sm:text-lg text-base">
+                See our all services
+              </h1>
+            </Button>
+          </motion.div>
 
-          <div className="flex items-center sm:gap-[20px] gap-[12px]">
+          <motion.div
+            initial={{ translateX: 50, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex items-center sm:gap-[20px] gap-[12px]"
+          >
             <div className="sm:w-[70px] sm:h-[70px] w-[60px] h-[60px] flex justify-center items-center rounded-full  relative">
               <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-10">
                 <div
@@ -50,7 +62,7 @@ const Hero = () => {
             >
               How it work
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
 

@@ -1,10 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 
 const TestimonialCard = ({ Image, name, text }) => {
   return (
     <div className="md:px-[20px] sm:px-[10px] px-[20px]">
-      <div className="py-[40px] px-[50px] carouselCardBg rounded-lg flex flex-col gap-[50px] items-center">
+      <motion.div
+        initial={{ translateY: 50, opacity: 0 }}
+        whileInView={{ translateY: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="py-[40px] px-[50px] carouselCardBg rounded-lg flex flex-col gap-[50px] items-center"
+      >
         <div className="pb-[30px] border-b-[1px] border-white w-full flex justify-center">
           <img src={Image} alt="testimonial-logo" className="h-[45px]" />
         </div>
@@ -24,7 +31,7 @@ const TestimonialCard = ({ Image, name, text }) => {
             {name}
           </h1>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

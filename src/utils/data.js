@@ -76,15 +76,15 @@ export const aboutUsData = [
 
 export const skillsData = [
   {
-    quantity: "3878",
+    quantity: 3878,
     title: "Satisfied Customer",
   },
   {
-    quantity: "2045",
+    quantity: 2045,
     title: "Successful Project",
   },
   {
-    quantity: "24 +",
+    quantity: 24,
     title: "Glorious Year",
   },
 ];

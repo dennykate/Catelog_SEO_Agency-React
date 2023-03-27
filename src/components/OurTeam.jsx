@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, TitleContainer } from "./CustomComponents";
+import { motion } from "framer-motion";
 
+import { Button, TitleContainer } from "./CustomComponents";
 import Template from "./Template";
 import User1 from "../assets/user-1.jpg";
 import User2 from "../assets/user-2.jpg";
@@ -9,8 +10,8 @@ import User3 from "../assets/user-3.jpg";
 const OurTeam = () => {
   return (
     <Template>
-      <div className="lg:px-0 px-[20px]">
-        <div className="w-full py-[50px] px-[32px] bg-[#F1F6FB] rounded-3xl translate-y-[150px]">
+      <div className="lg:px-0 sm:px-[20px] px-[5px]">
+        <div className="w-full py-[50px] sm:px-[32px] px-[20px] bg-[#F1F6FB] rounded-3xl translate-y-[150px]">
           <div className="w-full flex items-start lg:flex-row flex-col lg:gap-0 gap-[20px]">
             <div className="flex flex-col gap-[10px] items-start lg:w-1/2 w-full">
               <TitleContainer>Our Team</TitleContainer>
@@ -32,7 +33,13 @@ const OurTeam = () => {
               </Button>
             </div>
 
-            <div className="lg:w-1/2 w-full flex flex-col gap-[16px]">
+            <motion.div
+              initial={{ translateX: 50, opacity: 0 }}
+              whileInView={{ translateX: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2 w-full flex flex-col gap-[16px]"
+            >
               <div className="flex justify-center items-center gap-[16px]">
                 <div className="w-[200px] rounded-lg overflow-hidden">
                   <img src={User1} alt="user-1" className="w-full" />
@@ -47,7 +54,7 @@ const OurTeam = () => {
                   <img src={User3} alt="user-3" className="w-full" />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
