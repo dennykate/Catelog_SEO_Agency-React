@@ -1,3 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*::selection {
+  background-color: black;
+  color: white;
+}
+
+img {
+  user-select: none;
+}
+
+.backgroundImg {
+  background-image: url("./assets/hero.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.workTogetherBgImg {
+  background-image: url("./assets/cta-background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.testimonialBgImg {
+  background-image: url("./assets/testimonial-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btnBg {
+  background: rgb(0, 231, 255);
+  background: linear-gradient(180deg, rgba(0, 231, 255, 1) 0%, #0045ff 92%);
+}
+
+.socialBtnBg {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.socialBtnBg:hover {
+  background: rgb(0, 231, 255);
+  background: linear-gradient(180deg, rgba(0, 231, 255, 1) 0%, #0045ff 92%);
+}
+
+.circleBg {
+  background: rgb(146, 248, 216);
+  background: linear-gradient(
+    90deg,
+    rgba(146, 248, 216, 1) 0%,
+    rgba(74, 217, 248, 1) 35%
+  );
+}
+
+.starBg {
+  background: rgb(0, 229, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 229, 255, 1) 6%,
+    rgba(0, 76, 255, 1) 82%
+  );
+}
+
+.carouselBg {
+  background: rgb(43, 56, 104);
+  background: linear-gradient(
+    180deg,
+    rgba(43, 56, 104, 1) 0%,
+    rgba(5, 22, 79, 1) 82%
+  );
+}
+
+.carouselCardBg {
+  background: rgb(35, 49, 99);
+  background: linear-gradient(
+    180deg,
+    rgba(35, 49, 99, 1) 0%,
+    rgba(3, 27, 88, 1) 82%
+  );
+}
+
+.carouselCardBg:hover {
+  background: rgb(23, 204, 202);
+  background: linear-gradient(
+    180deg,
+    rgba(23, 204, 202, 1) 0%,
+    rgba(87, 123, 245, 1) 50%,
+    rgba(179, 109, 243, 1) 100%
+  );
+}
+
+.fadeAnimation {
+  animation: circleAnimate 1.5s linear infinite;
+}
+
+@keyframes circleAnimate {
+  from {
+    scale: 1;
+    opacity: 0.6;
+  }
+  to {
+    scale: 1.2;
+    opacity: 0;
+  }
+}
