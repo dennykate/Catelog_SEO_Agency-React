@@ -21,7 +21,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [showBtn, setShowBtn] = useState(false);
 
   useEffect(() => {
@@ -40,26 +40,25 @@ const App = () => {
     });
   }, []);
 
-  if (isLoading) return <Loading />;
-  else
-    return (
-      <div className="bg-white overflow-x-hidden">
-        <Hero />
-        <Works />
-        <AboutUs />
-        <WorkTogether />
-        <WhatWeOffer />
-        <OurSkills />
-        <CaseStudies />
-        <Testimonial />
-        <GetInTouch />
-        <OurTeam />
-        <PrimaryBlock />
-        <Footer />
+  return (
+    <div className="bg-white overflow-x-hidden">
+      {isLoading && <Loading />}
+      <Hero />
+      <Works />
+      <AboutUs />
+      <WorkTogether />
+      <WhatWeOffer />
+      <OurSkills />
+      <CaseStudies />
+      <Testimonial />
+      <GetInTouch />
+      <OurTeam />
+      <PrimaryBlock />
+      <Footer />
 
-        <ScrollToTop showBtn={showBtn} />
-      </div>
-    );
+      <ScrollToTop showBtn={showBtn} />
+    </div>
+  );
 };
 
 export default App;

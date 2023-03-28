@@ -11,7 +11,7 @@ const Testimonial = () => {
     <div className="w-full testimonialBgImg">
       <div className="2xl:max-w-[1440px] max-w-full py-[70px] pb-[120px] mx-auto">
         <div className="w-full flex justify-center items-center gap-[10px] py-[32px] flex-col">
-          <TitleContainer colorfulBg>Our Case Studies</TitleContainer>
+          <TitleContainer colorfulBg>Testimonial</TitleContainer>
           <h1 className="font-montserratAlternate text-white font-[600] sm:text-[35px] text-[22px] text-center">
             Our Recent Complete <br />
             Case Studies

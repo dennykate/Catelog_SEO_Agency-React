@@ -1,15 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { BiRightArrowAlt } from "react-icons/bi";
 
 const OfferCard = ({ Image, title, description }) => {
   return (
     <div className="md:px-[30px] sm:px-[10px] px-[20px]">
-      <motion.div
-        initial={{ translateY: 50, opacity: 0 }}
-        whileInView={{ translateY: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+      <div
         className="w-full flex items-center flex-col sm:gap-[20px] gap-[10px] py-[30px] lg:px-[30px] px-[10px] border-[1px] border-black
       rounded-lg border-opacity-5 hover:bg-white hover:shadow-md transition-all duration-200 ease-in-out group
       "
@@ -37,7 +32,7 @@ const OfferCard = ({ Image, title, description }) => {
             READ MORE
           </h1>
         </button>
-      </motion.div>
+      </div>
     </div>
   );
 };

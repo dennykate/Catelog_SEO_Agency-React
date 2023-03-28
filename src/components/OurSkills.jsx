@@ -13,7 +13,10 @@ const OurSkills = () => {
 
   return (
     <div className="w-full relative">
-      <Waypoint onEnter={() => setShowCount(true)} />
+      <Waypoint
+        onEnter={() => setShowCount(true)}
+        onLeave={() => setShowCount(false)}
+      />
 
       <div className="absolute md:-top-[12px] sm:-top-[3px] top-[16px] left-0 w-full z-10">
         <img src={FactShape} alt="cta-shape" className="w-full" />

@@ -1,8 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import CaseStudiesCard from "./CaseStudiesCard";
 import CaseStudiesCarouselContainer from "./CaseStudiesCarouselContainer";
 import { AllServicesButton, TitleContainer } from "./CustomComponents";
 import Template from "./Template";
+import { caseStudiesData } from "../utils/data";
 
 const CaseStudies = () => {
   return (
@@ -15,11 +18,18 @@ const CaseStudies = () => {
         </h1>
       </div>
 
-      <CaseStudiesCarouselContainer>
-        {[0, 1, 2, 3, 4].map((data, index) => (
-          <CaseStudiesCard key={index} />
-        ))}
-      </CaseStudiesCarouselContainer>
+      <motion.div
+        initial={{ translateY: 50, opacity: 0 }}
+        whileInView={{ translateY: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <CaseStudiesCarouselContainer>
+          {caseStudiesData.map((data, index) => (
+            <CaseStudiesCard key={index} {...data}/>
+          ))}
+        </CaseStudiesCarouselContainer>
+      </motion.div>
 
       <div className="my-[20px] w-full flex justify-center items-center">
         <AllServicesButton />

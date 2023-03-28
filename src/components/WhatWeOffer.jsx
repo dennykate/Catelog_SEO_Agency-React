@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 import { whatWeOfferData } from "../utils/data";
@@ -18,14 +19,21 @@ const WhatWeOffer = () => {
         </h1>
       </div>
 
-      <CarouselContainer
-        NextButton={<NextButton />}
-        PrevButton={<PrevButton />}
+      <motion.div
+        initial={{ translateY: 50, opacity: 0 }}
+        whileInView={{ translateY: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
       >
-        {whatWeOfferData.map((data, index) => (
-          <OfferCard key={index} {...data} />
-        ))}
-      </CarouselContainer>
+        <CarouselContainer
+          NextButton={<NextButton />}
+          PrevButton={<PrevButton />}
+        >
+          {whatWeOfferData.map((data, index) => (
+            <OfferCard key={index} {...data} />
+          ))}
+        </CarouselContainer>
+      </motion.div>
 
       <div className="my-[20px] w-full flex justify-center items-center">
         <AllServicesButton />

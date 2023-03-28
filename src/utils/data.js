@@ -17,6 +17,12 @@ import TestimonialShape3 from "../assets/testimonial-shape-3.png";
 import TestimonialShape4 from "../assets/testimonial-shape-4.png";
 import TestimonialShape5 from "../assets/testimonial-shape-5.png";
 
+import CaseStudies1 from "../assets/portfolio-1.jpg";
+import CaseStudies2 from "../assets/portfolio-2.jpg";
+import CaseStudies3 from "../assets/portfolio-3.jpg";
+import CaseStudies4 from "../assets/portfolio-4.jpg";
+import CaseStudies5 from "../assets/portfolio-5.jpg";
+
 export const navbarData = [
   {
     title: "home",
@@ -154,6 +160,34 @@ export const whatWeOfferData = [
     title: "Visitor Conversation Rate",
     description:
       "Our services cover all aspects of web analytics, from initial setup to advanced tracking solutions and custom features.",
+  },
+];
+
+export const caseStudiesData = [
+  {
+    Image: CaseStudies1,
+    name: "Social SEO Marketing",
+    category: "SEO, Marketing",
+  },
+  {
+    Image: CaseStudies2,
+    name: "Web Development",
+    category: "Finance & Banking",
+  },
+  {
+    Image: CaseStudies3,
+    name: "Startup Funding",
+    category: "Automobile Corporation LTD",
+  },
+  {
+    Image: CaseStudies4,
+    name: "Real State Organization",
+    category: "Architechture Farm, Chicago",
+  },
+  {
+    Image: CaseStudies5,
+    name: "Window 11 Development",
+    category: "Technology, Software",
   },
 ];
 
